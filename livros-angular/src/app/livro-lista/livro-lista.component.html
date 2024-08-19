@@ -1,1 +1,36 @@
-<p>livro-lista works!</p>
+<main class="container mt-4">
+    <h1 class="mb-4">Lista de Livros</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Editora</th>
+                <th>Autores</th>
+                <th>Ano</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let livro of livros">
+                <td>
+                    {{ livro.titulo }}
+                    <button class="btn btn-danger btn-sm ml-2" (click)="excluir(livro.codigo)">
+                        Excluir
+                    </button>
+                </td>
+                <td>
+                    {{ obterNome(livro.editora) }}
+                </td>
+                <td>
+                    <ul>
+                        <li *ngFor="let autor of livro.autor">{{ autor }}</li>
+                    </ul>
+                </td>
+                <td>{{ livro.ano }}</td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
