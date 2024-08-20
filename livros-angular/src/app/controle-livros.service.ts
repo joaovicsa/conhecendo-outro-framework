@@ -8,9 +8,9 @@ export class ControleLivrosService {
   livros: Livro[];
   constructor() {
     this.livros = [
-      { codigo: 1, titulo: 'Livro A', autor: 'Autor A', editora: 'Editora A', ano: 2020 },
-      { codigo: 2, titulo: 'Livro B', autor: 'Autor B', editora: 'Editora B', ano: 2021 },
-      { codigo: 3, titulo: 'Livro C', autor: 'Autor C', editora: 'Editora C', ano: 2022 }
+      { codigo: 1, titulo: 'Livro A', autor: ['Autor A'], editora: 'Editora A', ano: 2020 },
+      { codigo: 2, titulo: 'Livro B', autor: ['Autor B'], editora: 'Editora B', ano: 2021 },
+      { codigo: 3, titulo: 'Livro C', autor: ['Autor C'], editora: 'Editora C', ano: 2022 },
     ].map(data => new Livro(data.codigo, data.titulo, data.autor, data.editora, data.ano));
 
   }
