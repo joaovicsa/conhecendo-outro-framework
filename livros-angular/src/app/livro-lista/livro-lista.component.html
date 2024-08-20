@@ -2,25 +2,26 @@
     <h1 class="mb-4">Lista de Livros</h1>
 
     <table class="table table-striped">
-        <thead>
+        <thead class="thead-dark">
             <tr>
                 <th>Título</th>
                 <th>Editora</th>
                 <th>Autores</th>
                 <th>Ano</th>
-                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let livro of livros">
-                <td>
-                    {{ livro.titulo }}
-                    <button class="btn btn-danger btn-sm ml-2" (click)="excluir(livro.codigo)">
-                        Excluir
-                    </button>
+            <tr *ngFor="let livro of livros" class="py-2">
+                <td class="align-middle">
+                    <div>{{ livro.titulo }}</div>
+                    <div>
+                        <button class="btn btn-danger btn-sm mt-2" (click)="excluir(livro.codigo)">
+                            Excluir
+                        </button>
+                    </div>
                 </td>
                 <td>
-                    {{ obterNome(livro.editora) }}
+                    {{ obterNome(livro.codigo) }}
                 </td>
                 <td>
                     <ul>
@@ -28,8 +29,6 @@
                     </ul>
                 </td>
                 <td>{{ livro.ano }}</td>
-                <td>
-                </td>
             </tr>
         </tbody>
     </table>

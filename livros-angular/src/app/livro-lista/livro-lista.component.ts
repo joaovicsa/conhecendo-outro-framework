@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ControleEditoraService } from '../controle-editora.service';
 import { ControleLivrosService } from '../controle-livros.service';
-import { Editora } from '../editora';
 import { Livro } from '../livro';
+import { Editora } from '../editora';
 
 @Component({
   selector: 'app-livro-lista',
@@ -10,8 +10,8 @@ import { Livro } from '../livro';
   styleUrls: ['./livro-lista.component.css']
 })
 export class LivroListaComponent implements OnInit {
-  public editoras: Array<Editora> = [];
-  public livros: Array<Livro> = [];
+  public editoras: Editora[] = [];
+  public livros: Livro[] = [];
 
   constructor(
     private servEditora: ControleEditoraService,
@@ -23,8 +23,8 @@ export class LivroListaComponent implements OnInit {
     this.livros = this.servLivros.obterLivros();
   }
 
-  excluir = (codigoLivro: number): void => {
-    this.servLivros.excluir(codigoLivro);
+  excluir = (codigo: number): void => {
+    this.servLivros.excluir(codigo);
     this.livros = this.servLivros.obterLivros();
   }
 
