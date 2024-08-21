@@ -1,5 +1,5 @@
 <main class="container mt-4">
-    <h1 class="mb-4">Lista de Livros</h1>
+    <h1 class="mb-4">Catálogo de Livros</h1>
 
     <table class="table table-striped">
         <thead class="thead-dark">
@@ -25,7 +25,7 @@
                 </td>
                 <td>
                     <ul>
-                        <li *ngFor="let autor of livro.autor">{{ autor }}</li>
+                        <li *ngFor="let autores of livro.autores">{{ autores }}</li>
                     </ul>
                 </td>
                 <td>{{ livro.ano }}</td>
