@@ -6,13 +6,13 @@ import { Livro } from './livro';
 })
 export class ControleLivrosService {
   livros: Livro[];
+
   constructor() {
     this.livros = [
-      { codigo: 1, titulo: 'Livro A', autor: ['Autor A'], editora: 'Editora A', ano: 2020 },
-      { codigo: 2, titulo: 'Livro B', autor: ['Autor B'], editora: 'Editora B', ano: 2021 },
-      { codigo: 3, titulo: 'Livro C', autor: ['Autor C'], editora: 'Editora C', ano: 2022 },
-    ].map(data => new Livro(data.codigo, data.titulo, data.autor, data.editora, data.ano));
-
+      { codigo: 1, titulo: 'Livro A', autores: ['Autor A'], editora: 1, ano: 2020 },  // Usando códigos numéricos para editora
+      { codigo: 2, titulo: 'Livro B', autores: ['Autor B'], editora: 2, ano: 2021 },  // Corrigido 'autor' para 'autores'
+      { codigo: 3, titulo: 'Livro C', autores: ['Autor C'], editora: 3, ano: 2022 }
+    ].map(data => new Livro(data.codigo, data.titulo, data.autores, data.editora, data.ano));
   }
 
   obterLivros(): Livro[] {

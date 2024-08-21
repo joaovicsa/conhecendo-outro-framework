@@ -3,7 +3,8 @@ export class Livro {
         public codigo: number = 0,
         public titulo: string = '',
         public autores: string[] = [],
-        public editora: string = '',
-        public ano: number = 0
-    ) {}
+        public editora: number = 0,
+        public ano: number = 0,
+        public resumo: string = ''
+    ) { }
 }
