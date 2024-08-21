@@ -6,7 +6,7 @@ import { LivroDadosComponent } from './livro-dados/livro-dados.component';
 const routes: Routes = [
   { path: 'lista', component: LivroListaComponent },
   { path: 'dados', component: LivroDadosComponent },
-  { path: '', redirectTo: '/lista', pathMatch: 'full' } // Rota padrão redirecionando para "lista"
+  { path: '', redirectTo: '/lista', pathMatch: 'full' }
 ];
 
 @NgModule({
